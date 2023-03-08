@@ -10,19 +10,22 @@
 <body>
     
     <div id="form">
-        <form>
+        <form
+        method="POST" 
+  action="https://script.google.com/macros/s/AKfycbw4DEDNjbhvA1s1uhe6FfYD7JF7Lf6RLwWtmxvplOsbVgsCoT28h6wUHL61tW2VQQ2y/exec">
             <div id="internalform">
-                <h2>Registration</h2>
-                <hr>
-                <img id="formlogo" src="img/V-ISALogo.png">
+                <div id="success-message"></div>
+                <a href="index.html"><img id="formlogo" src="img/V-ISALogo.png"></a>
+                <h2>Meet & Greet 2023</h2>
                 <label for="">Name</label>
-                <input type="text">
+                <input name="Name" type="text" placeholder="Name" required>
                 <label for="">Student ID</label>
-                <input type="text">
+                <input name="StudentID" type="text" placeholder="Student ID" required>
                 <label for="">Nationality</label>
-                <input type="text" name="" id="">
-                <label for="">Years of study</label>
-                <input type=" " name="" id="">
+                <input name="Nationality" type="text" placeholder="Nationality" required>
+                <label for="">Years of Study</label>
+                <input name="Years of Study" type="text" placeholder="Years of study" required>
+                <button type="submit" id="submitform">Submit</button>
 
 
                 
@@ -30,6 +33,27 @@
         </form>
     </div>
 
+    <script>
+        const form = document.querySelector('form');
+        const successMessage = document.querySelector('#success-message');
+        form.addEventListener('submit', e => {
+          e.preventDefault(); // prevent the form from submitting normally
+          // submit the form data using AJAX
+          const xhr = new XMLHttpRequest();
+          xhr.open(form.method, form.action);
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              // clear the form
+              form.reset();
+              // display the success message
+              successMessage.textContent = 'Success! Your form has been submitted.';
+              
+            }
+          };
+          xhr.send(new FormData(form));
+        });
+      </script>
 
     <section class="sticky">
         <div class="bubbles">

@@ -7,18 +7,29 @@ html{
 body{
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    
 }
 
 h2{
     font-family: 'Roboto', sans-serif;
 }
 
+.centered{
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
 
+#success-message{
+  font-family: 'Roboto', sans-serif;
+  background-color: greenyellow;
+  
+  z-index: 10;
+}
 
 #logo{
-    display: grid;
-    place-items: center;
-    align-content: center;
+
 }
 
 #buttons{
@@ -54,16 +65,19 @@ h2{
 }   
 
 #form{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    grid-auto-flow: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: poppins;
 }
 
 form {
     width: 60%;
-    height: 700px;
-    margin: 5vh 0 0 0;
+    height: 750px;
+    margin: 5vh 0 120vh 0;
     border-radius: 50px;
     background: #ffffff;
     box-shadow:  20px 20px 100px #d9d9d9,
@@ -72,30 +86,81 @@ form {
 
 #internalform{
     padding: 10px 30px 0 30px;
-    display: grid;
-    align-content: center;
 }
 
 label{
+
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding-left: 5px;
 }
 
+form label,input,form button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
 input{
-    border-radius: 6px;
-    border: 1px solid ;
-    width: 50%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    padding-left: 5px;
-    height: 25px;
+  text-align: left;
+  margin-top: 10px;
+}
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+#submitform{
+  color: white;
+  margin-top: 20px;
+  background: #1DA1F2;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
 }
 
 #formlogo{
-    position: absolute;
-    right: 25%;
+
     width: 200px;
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+}
+
+#centerluckydraw{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    margin-top: 15vh;
+}
+
+#luckydrawtitle{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 100px;
+    margin: 0 0 15 0;
+}
+
+#lucky-draw-container{
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  margin: 0 0px 100px 0;
+}
+
+#luckydrawbutton{
+  padding-top: 30px;
 }
 
 
