@@ -33,7 +33,7 @@
         </form>
     </div>
 
-    <script>
+    <!-- <script>
         const form = document.querySelector('form');
         const successMessage = document.querySelector('#success-message');
         form.addEventListener('submit', e => {
@@ -45,15 +45,16 @@
           xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
               // clear the form
-              form.reset();
+             
               // display the success message
               successMessage.textContent = 'Success! Your form has been submitted.';
               
             }
           };
           xhr.send(new FormData(form));
+          form.reset();
         });
-      </script>
+      </script> -->
 
     <section class="sticky">
         <div class="bubbles">
