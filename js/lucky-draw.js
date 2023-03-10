@@ -31,8 +31,8 @@ button.addEventListener("click", function() {
     .then(data => {
       const names = data.values.flat().slice(1); // Remove the header row and flatten the array
       let remainingNames = names.slice(); // Make a copy of the original list
-      let intervalMs = 100; // Initial animation speed (in milliseconds)
-      let counter = 50;
+      let intervalMs = 150; // Initial animation speed (in milliseconds)
+      let counter = 100;
       button.style = "display: none;"
       let intervalId = setInterval(function() {
         if (remainingNames.length > 1 && counter != 0) {

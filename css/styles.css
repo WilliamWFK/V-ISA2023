@@ -155,7 +155,8 @@ input {
 
 #lucky-draw-container{
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  color: white;
+  font-size: 75px;
   margin: 0 0px 100px 0;
 }
 
