@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 html{
-    background-color: #69a2eb;
+    background-color: #fccbe7;
 
 }
 
@@ -76,7 +76,7 @@ h2{
 
 form {
     width: 60%;
-    height: 750px;
+    height: 800px;
     margin: 5vh 0 120vh 0;
     border-radius: 50px;
     background: #ffffff;
@@ -132,7 +132,9 @@ input {
 
 #formlogo{
 
-    width: 200px;
+    width: 50%;
+    max-width: 300px;
+    min-width: 150px;
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
