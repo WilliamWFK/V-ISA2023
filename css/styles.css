@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 html{
-    background-color: #fccbe7;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,117,1) 35%, rgba(166,0,255,1) 100%);
 
 }
 
@@ -52,16 +53,16 @@ h2{
     margin: 0 2vw 0 2vw;
     border-radius: 50px;
     background: #ededed;
-    box-shadow:  -20px -20px 72px #c9c9c9,
-                 20px 20px 72px #ffffff;
+    /* box-shadow:  -20px -20px 72px #c9c9c9,
+                 20px 20px 72px #ffffff; */
     
 }
 
 #buttons button:hover{
     border-radius: 50px;
     background: #d1d1d1;
-    box-shadow:  -20px -20px 72px #b2b2b2,
-                 20px 20px 72px #f0f0f0;
+    /* box-shadow:  -20px -20px 72px #b2b2b2,
+                 20px 20px 72px #f0f0f0; */
 }   
 
 #form{
@@ -78,10 +79,10 @@ form {
     width: 60%;
     height: 800px;
     margin: 5vh 0 120vh 0;
-    border-radius: 50px;
+    border-radius: 25px;
     background: #ffffff;
-    box-shadow:  20px 20px 100px #d9d9d9,
-                 -20px -20px 100px #ffffff;
+    /* box-shadow:  20px 20px 100px #d9d9d9,
+                 -20px -20px 100px #ffffff; */
 }
 
 #internalform{
@@ -126,7 +127,7 @@ input {
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
 }
 
 #submitform{
@@ -137,7 +138,7 @@ input {
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
-  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  /* box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white; */
   transition: 0.5s;
 }
 
@@ -149,7 +150,7 @@ input {
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
-    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+    /* box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white; */
 }
 
 #centerluckydraw{
