@@ -1,71 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-html{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,117,1) 35%, rgba(166,0,255,1) 100%);
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #796d8d 1.8%, #312443 100%);
+  background-blend-mode: normal;
+  background-size: 180%;
+  background-position: right 20%;
 
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    
+h2 {
+  font-family: 'Roboto', sans-serif;
 }
 
-h2{
-    font-family: 'Roboto', sans-serif;
-}
-
-.centered{
+.centered {
   display: grid;
   place-items: center;
   align-content: center;
 }
 
-#success-message{
+#success-message {
   font-family: 'Roboto', sans-serif;
   background-color: greenyellow;
-  
+
   z-index: 10;
 }
 
-#logo{
+#logo {}
 
+#buttons {
+  height: 200px;
+  margin-top: -75px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  grid-auto-flow: column;
+  gap: 4px;
 }
 
-#buttons{
-    height: 200px;
-    margin-top: -75px;
-    display: grid;
-    place-items: center;
-    align-content: center;
-    grid-auto-flow: column;
-    gap: 4px;
-}
-
-#buttons button{
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    z-index: 1;
-    width: 250px;
-    height: 100px;
-    border: none;
-    margin: 0 2vw 0 2vw;
-    border-radius: 50px;
-    background: #ededed;
-    /* box-shadow:  -20px -20px 72px #c9c9c9,
+#buttons button {
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+  z-index: 1;
+  width: 250px;
+  height: 100px;
+  border: none;
+  margin: 0 2vw 0 2vw;
+  border-radius: 50px;
+  background: #ededed;
+  /* box-shadow:  -20px -20px 72px #c9c9c9,
                  20px 20px 72px #ffffff; */
-    
+
 }
 
-#buttons button:hover{
-    border-radius: 50px;
-    background: #d1d1d1;
-    /* box-shadow:  -20px -20px 72px #b2b2b2,
+#buttons button:hover {
+  border-radius: 50px;
+  background: #d1d1d1;
+  /* box-shadow:  -20px -20px 72px #b2b2b2,
                  20px 20px 72px #f0f0f0; */
-}   
+}
 
-#form{
+#form {
   display: flex;
   align-items: center;
   text-align: center;
@@ -76,27 +73,29 @@ h2{
 }
 
 form {
-    width: 60%;
-    height: 800px;
-    margin: 5vh 0 120vh 0;
-    border-radius: 25px;
-    background: #ffffff;
-    /* box-shadow:  20px 20px 100px #d9d9d9,
+  width: 60%;
+  height: 800px;
+  margin: 5vh 0 120vh 0;
+  border-radius: 25px;
+  background: #ffffff;
+  /* box-shadow:  20px 20px 100px #d9d9d9,
                  -20px -20px 100px #ffffff; */
 }
 
-#internalform{
-    padding: 10px 30px 0 30px;
+#internalform {
+  padding: 10px 30px 0 30px;
 }
 
-label{
+label {
 
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    padding-left: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  padding-left: 5px;
 }
 
-form label,input,form button {
+form label,
+input,
+form button {
   display: block;
   width: 100%;
   padding: 0;
@@ -105,10 +104,11 @@ form label,input,form button {
   box-sizing: border-box;
 }
 
-input{
+input {
   text-align: left;
   margin-top: 10px;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -120,6 +120,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 input {
   background: #ecf0f3;
   padding: 10px;
@@ -130,7 +131,7 @@ input {
   /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
 }
 
-#submitform{
+#submitform {
   color: white;
   margin-top: 20px;
   background: #1DA1F2;
@@ -142,149 +143,163 @@ input {
   transition: 0.5s;
 }
 
-#formlogo{
+#formlogo {
 
-    width: 50%;
-    max-width: 300px;
-    min-width: 150px;
-    margin: auto;
-    border-radius: 50%;
-    box-sizing: border-box;
-    /* box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white; */
+  width: 50%;
+  max-width: 300px;
+  min-width: 150px;
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white; */
 }
 
-#centerluckydraw{
-    display: grid;
-    place-items: center;
-    align-content: center;
-    margin-top: 15vh;
+#centerluckydraw {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  margin-top: 15vh;
 }
 
-#luckydrawtitle{
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-size: 100px;
-    margin: 0 0 15 0;
+#luckydrawtitle {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 100px;
+  margin: 0 0 15 0;
 }
 
-#lucky-draw-container{
+#lucky-draw-container {
   font-family: 'Roboto', sans-serif;
   color: white;
   font-size: 75px;
   margin: 0 0px 100px 0;
 }
 
-#luckydrawbutton{
+#luckydrawbutton {
   padding-top: 30px;
 }
 
 
-.sticky{
-    z-index: -1;
-    pointer-events: none;
+.sticky {
+  z-index: -1;
+  pointer-events: none;
 }
 
 
 /* Bubbles */
-.bubbles{
-    pointer-events: none;
-    position:absolute;
-    width:100%;
-    height: 100%;
-    z-index:-1;
-    overflow:hidden;
-    top:0;
-    left:0;
+.bubbles {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 65%;
+  animation-duration: 8s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(7) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(8) {
+  width: 25px;
+  height: 25px;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(9) {
+  width: 15px;
+  height: 15px;
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(10) {
+  width: 90px;
+  height: 90px;
+  left: 25%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -100px;
+    transform: translateX(0);
   }
-  .bubble{
-    position: absolute;
-    bottom:-100px;
-    width:40px;
-    height: 40px;
-    background:#f1f1f1;
-    border-radius:50%;
-    opacity:0.5;
-    animation: rise 10s infinite ease-in;
+
+  50% {
+    transform: translate(100px);
   }
-  .bubble:nth-child(1){
-    width:40px;
-    height:40px;
-    left:10%;
-    animation-duration:8s;
+
+  100% {
+    bottom: 1080px;
+    transform: translateX(-200px);
   }
-  .bubble:nth-child(2){
-    width:20px;
-    height:20px;
-    left:20%;
-    animation-duration:5s;
-    animation-delay:1s;
-  }
-  .bubble:nth-child(3){
-    width:50px;
-    height:50px;
-    left:35%;
-    animation-duration:7s;
-    animation-delay:2s;
-  }
-  .bubble:nth-child(4){
-    width:80px;
-    height:80px;
-    left:50%;
-    animation-duration:11s;
-    animation-delay:0s;
-  }
-  .bubble:nth-child(5){
-    width:35px;
-    height:35px;
-    left:55%;
-    animation-duration:6s;
-    animation-delay:1s;
-  }
-  .bubble:nth-child(6){
-    width:45px;
-    height:45px;
-    left:65%;
-    animation-duration:8s;
-    animation-delay:3s;
-  }
-  .bubble:nth-child(7){
-    width:90px;
-    height:90px;
-    left:70%;
-    animation-duration:12s;
-    animation-delay:2s;
-  }
-  .bubble:nth-child(8){
-    width:25px;
-    height:25px;
-    left:80%;
-    animation-duration:6s;
-    animation-delay:2s;
-  }
-  .bubble:nth-child(9){
-    width:15px;
-    height:15px;
-    left:70%;
-    animation-duration:5s;
-    animation-delay:1s;
-  }
-  .bubble:nth-child(10){
-    width:90px;
-    height:90px;
-    left:25%;
-    animation-duration:10s;
-    animation-delay:4s;
-  }
-  @keyframes rise{
-    0%{
-      bottom:-100px;
-      transform:translateX(0);
-    }
-    50%{
-      transform:translate(100px);
-    }
-    100%{
-      bottom:1080px;
-      transform:translateX(-200px);
-    }
-  }
+}
