@@ -285,7 +285,7 @@ h1 {
 
 
 
-#ad-container {
+#vuw-container {
   position: absolute;
   bottom: 4rem;
   right: 4rem;
@@ -293,7 +293,7 @@ h1 {
   height: 20vh;
 }
 
-#ad-logo {
+#vuw-logo {
   object-fit: contain;
   width: 7rem;
   background-color: var(--background-colour);
@@ -304,7 +304,7 @@ h1 {
   z-index: 2;
 }
 
-#ad-text {
+#vuw-text {
   position: absolute;
   font-size: 1.25em;
   width: 500px;

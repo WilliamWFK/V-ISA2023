@@ -7,6 +7,7 @@ const container = document.getElementById("lucky-draw-container");
 const text = document.getElementById("luckydrawtitle");
 const button = document.getElementById("lucky-draw-button");
 const wheel = document.getElementById("wheelimg");
+const ad = document.getElementById("ad-text");
 
 // Function to randomly select a name from the list
 function selectName(names) {
@@ -19,6 +20,7 @@ function displayWinner(winner) {
   container.textContent = winner;
   const container = document.querySelector('.fireworks')
   const fireworks = new Fireworks.default(container)
+  ad.style = "display: block;"
   fireworks.start()
   clearInterval(intervalId);
   alert(`Congratulations, ${winner}!`);
