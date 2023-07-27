@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>V-ISA 2023 | Registration</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>V-ISA 2023 | Registration</title>
 </head>
+
 <body>
-    
-    <div id="form">
-        <form
-        method="POST" 
-  action="https://script.google.com/macros/s/AKfycbw4DEDNjbhvA1s1uhe6FfYD7JF7Lf6RLwWtmxvplOsbVgsCoT28h6wUHL61tW2VQQ2y/exec">
-            <div id="internalform">
-                <div id="success-message"></div>
-                <img id="formlogo" src="img/V-ISALogo.png">
-                <h2>Meet & Greet Tri 2 2023</h2>
-                <label for="">Name</label>
-                <input name="Name" type="text" placeholder="William Kho" required>
-                <label for="">Student ID</label>
-                <input name="StudentID" type="number" placeholder="300876876" required>
-                <label for="">Nationality</label>
-                <input name="Nationality" type="text" placeholder="New Zealand" required>
-                <label for="">Years of Study</label>
-                <input name="Years of Study" type="number" placeholder="4" required>
-                <button type="button" id="submitform" onclick="submitForm()">Submit</button>
-              
 
-                <div id="success-message" style="display: none;">Form submitted successfully!</div>
-            </div>
-        </form>
+
+  <img id="RegistrationLogo" src="img/V-ISALogo.png">
+
+
+  <img id="wheelimg" src="img/spinningwheel.png" alt="wheel">
+
+  <form id="registrationform" method="POST"
+    action="https://script.google.com/macros/s/AKfycbw4DEDNjbhvA1s1uhe6FfYD7JF7Lf6RLwWtmxvplOsbVgsCoT28h6wUHL61tW2VQQ2y/exec">
+    <h2>Registration</h2>
+    <div id="internalform">
+      <div id="success-message"></div>
+      <!-- /*Meet & Greet Tri 2 2023*/ -->
+      <label for="">Name</label>
+      <input name="Name" type="text" placeholder="William Kho" required>
+      <label for="">Student ID</label>
+      <input name="StudentID" type="number" placeholder="300876876" required>
+      <label for="">Nationality</label>
+      <input name="Nationality" type="text" placeholder="New Zealand" required>
+      <label for="">Years of Study</label>
+      <input name="Years of Study" type="number" placeholder="4" required>
+      <button type="button" id="submitform" onclick="submitForm()">Submit</button>
+
+
+      <div id="success-message" style="display: none;">Form submitted successfully!</div>
     </div>
-
-    <!-- Same HTML code as before, just remove the 'action' attribute from the form tag -->
-
+  </form>
 
 
-    <script>
-      function submitForm() {
-        const form = document.querySelector('form');
+
+  <!-- Same HTML code as before, just remove the 'action' attribute from the form tag -->
+
+
+
+  <script>
+    function submitForm() {
+      const form = document.querySelector('form');
 
       // Serialize the form data
       const formData = new FormData(form);
 
       // Perform the Ajax request using the fetch API
-    fetch('https://script.google.com/macros/s/AKfycbw4DEDNjbhvA1s1uhe6FfYD7JF7Lf6RLwWtmxvplOsbVgsCoT28h6wUHL61tW2VQQ2y/exec', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      // Handle the response (e.g., show success message, etc.)
-      successMessage.textContent = 'Form submitted successfully!';
+      fetch('https://script.google.com/macros/s/AKfycbw4DEDNjbhvA1s1uhe6FfYD7JF7Lf6RLwWtmxvplOsbVgsCoT28h6wUHL61tW2VQQ2y/exec', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => {
+          // Handle the response (e.g., show success message, etc.)
+          successMessage.textContent = 'Form submitted successfully!';
 
-      // Clear the success message after 5 seconds
-      setTimeout(() => {
-        successMessage.textContent = '';
-      }, 5000);
-    })
-    .catch(error => {
-      // Handle any errors that occurred during the Ajax request
-      console.error('Error submitting form:', error);
-    });
+          // Clear the success message after 5 seconds
+          setTimeout(() => {
+            successMessage.textContent = '';
+          }, 5000);
+        })
+        .catch(error => {
+          // Handle any errors that occurred during the Ajax request
+          console.error('Error submitting form:', error);
+        });
 
-    // Reset the form fields after submission
-    form.reset();
-  }
-</script>
+      // Reset the form fields after submission
+      form.reset();
+    }
+  </script>
 
-      <!-- <script>
+  <!-- <script>
         const form = document.querySelector('form');
         const successMessage = document.querySelector('#success-message');
         form.addEventListener('submit', e => {
@@ -91,21 +98,21 @@
         });
       </script> -->
 
-    <section class="sticky">
-        <div class="bubbles">
-            <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          
-        </div>
-      </section>
-    
+
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+  </div>
+
 </body>
+
 </html>
