@@ -305,7 +305,16 @@ h1 {
 }
 
 #ad-text {
-
+  position: absolute;
+  font-size: 1.25em;
+  width: 500px;
+  bottom: 1v;
+  right: 3em;
+  background-color: var(--accent);
+  color: white;
+  padding: 1em 1em;
+  border-radius: 1em;
+  text-align: center;
 }
 
 
