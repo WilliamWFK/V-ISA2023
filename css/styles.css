@@ -171,21 +171,16 @@ h2 {
   cursor: pointer;
 }
 
-input {
-  text-align: left;
-  margin-top: 10px;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  /* Chrome, Safari, Edge, Opera */
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /* Firefox */
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
@@ -221,6 +216,16 @@ h1 {
   margin: 0;
   top: 6rem;
   left: 6rem;
+}
+
+h2 {
+  color: white;
+  position: absolute;
+  display: block;
+  font-size: 6em;
+  margin: 0;
+  top: 6rem;
+  left: 75rem;
 }
 
 #lucky-draw-container {
