@@ -1,18 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap');
+
+
+html {
+  background: radial-gradient(circle, #796d8d 1.8%, #312443 100%);
+  background-blend-mode: normal;
+  background-size: 180%;
+  background-position: right 20%;
+}
 
 body {
+  height: 100vh;
+  width: 100vw;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: radial-gradient(circle, #796d8d 1.8%, #312443 100%);
   background-blend-mode: normal;
   background-size: 180%;
   background-position: right 20%;
 
+  --background-colour: #eee;
+  --accent: #796d8d;
+  --light-accent: #b6afc1;
+
+  font-family: 'Lexend', Helvetica, sans-serif;
+
+}
+
+#wheelimg {
+  position: fixed;
+  object-fit: contain;
+  height: 100vh;
+  bottom: -45vh;
+  left: -45vh;
+  transform: rotate(5deg);
+  filter: blur(8px);
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lexend', sans-serif;
 }
 
 .centered {
@@ -27,8 +54,6 @@ h2 {
 
   z-index: 10;
 }
-
-#logo {}
 
 #buttons {
   height: 200px;
@@ -62,137 +87,170 @@ h2 {
                  20px 20px 72px #f0f0f0; */
 }
 
-#form {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  place-items: center;
-  overflow: hidden;
-  font-family: poppins;
+
+
+
+
+/* Registration page */
+#RegistrationLogo {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  object-fit: contain;
+  width: 12vw;
+  background-color: var(--background-colour);
+  border-radius: 20vw;
+  padding: 1em;
 }
 
-form {
-  width: 60%;
-  height: 800px;
-  margin: 5vh 0 120vh 0;
-  border-radius: 25px;
-  background: #ffffff;
-  /* box-shadow:  20px 20px 100px #d9d9d9,
-                 -20px -20px 100px #ffffff; */
+
+#registrationform {
+  position: absolute;
+  height: 80vh;
+  aspect-ratio: 0.8;
+  top: 10vh;
+  right: 14vw;
+  background-color: var(--background-colour);
+  border-radius: 2.2rem;
+  box-sizing: border-box;
+  padding: 4em 4em 2.5em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #internalform {
-  padding: 10px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+
 }
 
-label {
-
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  padding-left: 5px;
+#internalform input {
+  margin-bottom: 2em;
+  line-height: 1.9em;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--light-accent);
+  background-color: var(--background-colour);
+  font-size: 1em;
 }
 
-form label,
-input,
-form button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
+#internalform input:focus {
+  border-color: var(--accent);
   outline: none;
-  box-sizing: border-box;
 }
 
-input {
-  text-align: left;
-  margin-top: 10px;
+#registrationform h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input {
-  background: #ecf0f3;
-  padding: 10px;
-  padding-left: 20px;
-  height: 50px;
-  font-size: 14px;
-  border-radius: 50px;
-  /* box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
+#registrationform label {
+  font-size: 1.1em;
 }
 
 #submitform {
+  background-color: var(--light-accent);
   color: white;
-  margin-top: 20px;
-  background: #1DA1F2;
-  height: 40px;
-  border-radius: 20px;
+  width: fit-content;
+  padding: 1em 3em;
+  outline: 0;
+  border: 0;
+  border-radius: 2em;
+  font-weight: bold;
+  margin-left: auto;
   cursor: pointer;
-  font-weight: 900;
-  /* box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white; */
-  transition: 0.5s;
 }
 
-#formlogo {
 
-  width: 50%;
-  max-width: 300px;
-  min-width: 150px;
-  margin: auto;
-  border-radius: 50%;
-  box-sizing: border-box;
-  /* box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white; */
+/* Add media query for mobile */
+@media (max-width: 550px) {
+  #registrationform {
+    right: unset;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 95vw;
+    top: 15vh;
+  }
+
+  #RegistrationLogo {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    object-fit: contain;
+    width: 8vw;
+    background-color: var(--background-colour);
+    border-radius: 20vw;
+    padding: 1em;
+  }
 }
 
-#centerluckydraw {
-  display: grid;
-  place-items: center;
-  align-content: center;
-  margin-top: 15vh;
-}
 
-#luckydrawtitle {
-  font-family: 'Roboto', sans-serif;
-  color: #ffffff;
-  font-size: 100px;
-  margin: 0 0 15 0;
+/* Lucky draw page */
+h1 {
+  color: white;
+  position: absolute;
+  display: block;
+  font-size: 6em;
+  margin: 0;
+  top: 6rem;
+  left: 6rem;
 }
 
 #lucky-draw-container {
-  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  width: 75vw;
+  height: 20vh;
+  right: 10vw;
+  top: 50vh;
+
+  text-align: right;
+  font-size: 4.5em;
   color: white;
-  font-size: 75px;
-  margin: 0 0px 100px 0;
 }
 
-#luckydrawbutton {
-  padding-top: 30px;
+#winner-name{
+  display: block;
+  text-decoration: underline;
+}
+
+#lucky-draw-button {
+  font-size: 3rem;
+  background-color: var(--light-accent);
+  color: white;
+  width: fit-content;
+  padding: 1em 2em;
+  outline: 0;
+  border: 0;
+  border-radius: 2em;
+  font-weight: bold;
+  margin-left: auto;
+  cursor: pointer;
+
+
 }
 
 
-.sticky {
-  z-index: -1;
-  pointer-events: none;
-}
+
+
+
+
+
+
+
+
+
 
 
 /* Bubbles */
 .bubbles {
   pointer-events: none;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -203,9 +261,10 @@ input {
   bottom: -100px;
   width: 40px;
   height: 40px;
-  background: #f1f1f1;
+  background: #b9afcb;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.1;
+  filter: blur(9px);
   animation: rise 10s infinite ease-in;
 }
 

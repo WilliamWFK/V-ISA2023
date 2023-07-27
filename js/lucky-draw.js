@@ -31,7 +31,9 @@ button.addEventListener("click", function() {
     .then(data => {
       const names = data.values.flat().slice(1); // Remove the header row and flatten the array
       let remainingNames = names.slice(); // Make a copy of the original list
-      let intervalMs = 150; // Initial animation speed (in milliseconds)
+      remainingNames.sort(() => Math.random() - 0.5); // Shuffle the list of names
+
+      let intervalMs = 50; // Initial animation speed (in milliseconds)
       let counter = 100;
       button.style = "display: none;"
       let intervalId = setInterval(function() {
@@ -45,7 +47,20 @@ button.addEventListener("click", function() {
         } else {
           // Only one name left, display it and stop the animation
           text.textContent = "Congratulations";
-          
+          container.textContent = "";
+          // add new span element to container
+          const span = document.createElement("span");
+          span.id = "winner-name";
+          span.textContent = remainingNames[0];
+          container.appendChild(span);
+          // add new span saying "has won"
+          const span2 = document.createElement("span");
+          span2.textContent = " has won!";
+          container.appendChild(span2);
+
+          // stop interval
+          clearInterval(intervalId);
+
           displayWinner(remainingNames[indexToRemove]);
         }
       }, intervalMs);
