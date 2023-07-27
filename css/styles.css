@@ -171,6 +171,10 @@ h2 {
   cursor: pointer;
 }
 
+#submitsuccess {
+  background-color: greenyellow;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -218,14 +222,14 @@ h1 {
   left: 6rem;
 }
 
-h2 {
+#luckydrawtitle {
   color: white;
   position: absolute;
   display: block;
   font-size: 6em;
   margin: 0;
-  top: 6rem;
-  left: 75rem;
+  top: 15rem;
+  left: 93rem;
 }
 
 #lucky-draw-container {

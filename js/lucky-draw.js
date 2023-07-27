@@ -6,6 +6,7 @@ const spreadsheetId = "1G_pVMtefWo9suQ_Wd6hZDwNyMj7HDfrk8b_o3Fmf01g";
 const container = document.getElementById("lucky-draw-container");
 const text = document.getElementById("luckydrawtitle");
 const button = document.getElementById("lucky-draw-button");
+const wheel = document.getElementById("wheelimg");
 
 // Function to randomly select a name from the list
 function selectName(names) {
@@ -34,7 +35,7 @@ button.addEventListener("click", function() {
       remainingNames.sort(() => Math.random() - 0.5); // Shuffle the list of names
 
       let intervalMs = 50; // Initial animation speed (in milliseconds)
-      let counter = 100;
+      let counter = 150;
       button.style = "display: none;"
       let intervalId = setInterval(function() {
         if (remainingNames.length > 1 && counter != 0) {
@@ -44,9 +45,11 @@ button.addEventListener("click", function() {
           container.textContent = removedName;
           text.textContent = counter;
           counter -= 1;
+          wheel.style.filter = "blur(0px)"
+          wheel.style.transform = "rotate(" + ((100-counter) * 8) + "deg)";
         } else {
           // Only one name left, display it and stop the animation
-          text.textContent = "Congratulations";
+          text.textContent = "";
           container.textContent = "";
           // add new span element to container
           const span = document.createElement("span");
@@ -57,6 +60,7 @@ button.addEventListener("click", function() {
           const span2 = document.createElement("span");
           span2.textContent = " has won!";
           container.appendChild(span2);
+          
 
           // stop interval
           clearInterval(intervalId);
