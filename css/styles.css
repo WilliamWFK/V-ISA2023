@@ -308,7 +308,7 @@ h1 {
   position: absolute;
   font-size: 1.25em;
   width: 500px;
-  bottom: 1v;
+  bottom: 0;
   right: 3em;
   background-color: var(--accent);
   color: white;
