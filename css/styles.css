@@ -225,6 +225,9 @@ input[type=number] {
     border-radius: 20vw;
     padding: 1em;
   }
+  #registration-blurb{
+    display: none;
+  }
 }
 
 
