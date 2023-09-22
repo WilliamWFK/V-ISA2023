@@ -323,7 +323,23 @@ h1 {
 
 
 
+.ticketingBox {
+  /* background-color: #ffffff; */
+  
+}
 
+.ticketHeader{
+  margin-top: 0px;
+
+}
+
+.ticketPrice{
+  float: right;
+}
+
+.ticketDescription{
+  color: #414040;
+}
 
 
 
