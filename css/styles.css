@@ -214,19 +214,30 @@ input[type=number] {
     width: 95vw;
     top: 15vh;
   }
+  #ticketingForm {
+    right: unset;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 95vw;
+  }
 
   #RegistrationLogo {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    object-fit: contain;
-    width: 8vw;
-    background-color: var(--background-colour);
-    border-radius: 20vw;
-    padding: 1em;
+      /* position: absolute;
+      top: 1em;
+      left: 1em;
+      object-fit: contain;
+      width: 8vw;
+      background-color: var(--background-colour);
+      border-radius: 20vw;
+      padding: 1em; */
+      display: none;
   }
   #registration-blurb{
     display: none;
+  }
+  .ticketPrice{
+    display: ;
+    color: turquoise;
   }
 }
 
@@ -282,8 +293,6 @@ h1 {
   font-weight: bold;
   margin-left: auto;
   cursor: pointer;
-
-
 }
 
 
@@ -322,6 +331,21 @@ h1 {
 
 
 
+#ticketingForm {
+  position: absolute;
+  aspect-ratio: 0.8;
+  max-width: 800px;
+  min-width: 400px;
+  top: 10vh;
+  right: 14vw;
+  background-color: #eee;
+  border-radius: 2.2rem;
+  box-sizing: border-box;
+  padding: 4em 4em 2.5em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .ticketingBox {
   /* background-color: #ffffff; */
