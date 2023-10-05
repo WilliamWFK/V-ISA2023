@@ -6,14 +6,14 @@ async function onScanSuccess(decodedText, decodedResult) {
     var components = decryptedText.split(' ');
 
     // Extract the name, email, and drink choice
-    const name = components.slice(0, components.length - 2).join(' ');
-    const email = components[components.length - 2];
-    const drinkChoice = components[components.length - 1];
+    var name = components.slice(0, components.length - 2).join(' ');
+    var email = components[components.length - 2];
+    var drinkChoice = components[components.length - 1];
 
     const nameElement = document.getElementById('name');
     const drinkChoiceElement = document.getElementById('drinkchoice');
-    nameElement.innerHTML = name;
-    drinkChoiceElement.innerHTML = decodedText;
+    nameElement.innerText = name;
+    drinkChoiceElement.innerText = drinkChoice;
     
     console.log(name);
     console.log(drinkChoice);
