@@ -2,13 +2,22 @@
 async function onScanSuccess(decodedText, decodedResult) {
     // handle the scanned code as you like, for example:
     const hash = atob(decodedText);
-    const [name, email, drinkChoice] = decodedString.split('+').map(item => item.trim());
+    // Split the decoded string into an array of components
+    const components = decodedString.split(' ');
 
-    const nameDisplay = document.getElementById('name');
-    const drinkchoiceDisplay = document.getElementById('drinkchoice');
+    // Extract the name, email, and drink choice
+    const name = components.slice(0, components.length - 2).join(' ');
+    const email = components[components.length - 2];
+    const drinkChoice = components[components.length - 1];
 
-    nameDisplay.innerText = `Name: ${name}`;
-    drinkChoiceDisplay.innerText = `Drink Choice: ${drinkChoice}`;
+    const nameElement = document.getElementsById('name');
+    const drinkChoiceElement = document.getElementsById('drinkchoice');
+    nameElement.innerHTML = name;
+    drinkChoiceElement.innerText = drinkChoice;
+
+
+    const hashed = document.getElementById('hash');
+    hashed.innerText = 'Hash:';
 
     
     html5QrcodeScanner.clear();
