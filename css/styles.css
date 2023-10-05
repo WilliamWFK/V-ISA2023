@@ -373,13 +373,35 @@ h1 {
 }
 
 
-#reader {
+#qrscannerbox {
+  position: absolute;
+  border-radius: 2.2rem;
+  box-sizing: border-box;
+  padding: 4em 4em 2.5em 4em;
   top: 10vh;
   background-color: white;
   right: unset;
   transform: translateX(-50%);
   left: 50%;
   width: 95vw;
+  height: 80vh;
+}
+
+#reader {
+  margin-top: -20px;
+  background-color: #b890f0;
+}
+#output{
+  width: 100%;
+  height: 40vh;
+  background-color: #9a90f0;
+}
+
+.outputtxt{
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-bottom: -20px;
+  font-size: large;
 }
 
 

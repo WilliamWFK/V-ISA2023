@@ -1,11 +1,20 @@
 
-function onScanSuccess(decodedText, decodedResult) {
+async function onScanSuccess(decodedText, decodedResult) {
     // handle the scanned code as you like, for example:
-    const hash = md5(decodedText);
-    console.log(`Code matched = ${decodedText}`, decodedResult);
+    const hash = atob(decodedText);
+    const [name, email, drinkChoice] = decodedString.split('+').map(item => item.trim());
+
+    const nameDisplay = document.getElementById('name');
+    const drinkchoiceDisplay = document.getElementById('drinkchoice');
+
+    nameDisplay.innerText = `Name: ${name}`;
+    drinkChoiceDisplay.innerText = `Drink Choice: ${drinkChoice}`;
+
+    
+    html5QrcodeScanner.clear();
   }
   
-  function onScanFailure(error) {
+ async function onScanFailure(error) {
     // handle scan failure, usually better to ignore and keep scanning.
     // for example:
     console.warn(`Code scan error = ${error}`);
