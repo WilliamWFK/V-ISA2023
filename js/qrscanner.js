@@ -1,6 +1,6 @@
 
 async function onScanSuccess(decodedText, decodedResult) {
-    fetch("https://posts-coupon-steven-passion.trycloudflare.com/" + decodedText);
+    fetch("https://arrest-self-behalf-proprietary.trycloudflare.com/" + decodedText);
     // handle the scanned code as you like, for example:
     const decryptedText = atob(decodedText);
     // Split the decoded string into an array of components
