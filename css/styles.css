@@ -390,29 +390,35 @@ h1 {
   background-color: #b890f0;
   padding: 4em 4em 2.5em 4em;
   position: absolute;
-  border-radius: 2.2rem;
+  
+  border-radius: 0 0 2.2rem 2.2rem;
   box-sizing: border-box;
     transform: translateX(-50%);
   left: 50%;
   width: 95vw;
+  top: 200px;
 }
 #output{
-  width: 100%;
-  height: 40vh;
-  background-color: white;
+  background-color: #ffffff;
   padding: 4em 4em 2.5em 4em;
   position: absolute;
-  border-radius: 2.2rem;
+  border-radius: 2.2rem 2.2rem 0 0;
   box-sizing: border-box;
+    transform: translateX(-50%);
+  left: 50%;
+  width: 95vw;
+  height: 200px;
   
 }
 
 .outputtxt{
-  padding-top: 20px;
-  padding-left: 20px;
-  margin-bottom: -20px;
   font-size: large;
 }
+
+#outputheader{
+  margin: 0;
+}
+
 
 
 
